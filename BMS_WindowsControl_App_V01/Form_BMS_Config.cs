@@ -521,7 +521,7 @@ namespace PCANBasicExample
                             label23.Visible = false;
 
                             
-                            //PARSE status0 message
+                            //PARSE status message
                             if (CanId[0] == 0x10)
                             {
                                 byte statusByte0 = msg.CANMsg.DATA[0];
@@ -536,6 +536,7 @@ namespace PCANBasicExample
                                 boxTemp3.Text = Temperature3.ToString();
                                 boxTemp4.Text = Temperature4.ToString();
 
+                                //invididual cells
                                 if (IsBitSet(statusByte0, 6)) boxStatus0b6.BackColor = Color.Green;
                                 else boxStatus0b6.BackColor = Color.Red;
                                 if (IsBitSet(statusByte0, 0)) boxStatus0b5.BackColor = Color.Green;
@@ -551,14 +552,17 @@ namespace PCANBasicExample
                                 if (IsBitSet(statusByte0, 5)) boxStatus0b0.BackColor = Color.Green;
                                 else boxStatus0b0.BackColor = Color.Red;
 
+                                //master status
                                 if (IsBitSet(statusByte1, 0)) boxStatus1b0.BackColor = Color.Green; //all full
                                 else boxStatus1b0.BackColor = Color.Gray;
                                 if (IsBitSet(statusByte1, 1)) boxStatus1b1.BackColor = Color.Green; //one full
                                 else boxStatus1b1.BackColor = Color.Gray;
-                                if (IsBitSet(statusByte1, 2)) boxStatus1b2.BackColor = Color.Red; //low 
+                                if (IsBitSet(statusByte1, 2)) boxStatus1b2.BackColor = Color.Orange; //empty
                                 else boxStatus1b2.BackColor = Color.Gray;
-                                if (IsBitSet(statusByte1, 3)) boxStatus1b3.BackColor = Color.Red; //empty
+                                if (IsBitSet(statusByte1, 3)) boxStatus1b3.BackColor = Color.Red; //cut-off
                                 else boxStatus1b3.BackColor = Color.Gray;
+                                if (IsBitSet(statusByte1, 4)) boxStatus1b4.BackColor = Color.Red; //overvoltage
+                                else boxStatus1b4.BackColor = Color.Gray;
 
 
 
@@ -909,6 +913,8 @@ namespace PCANBasicExample
         {
             boxBaudRate.SelectedIndex = 0;
         }
+
+
 
 
 

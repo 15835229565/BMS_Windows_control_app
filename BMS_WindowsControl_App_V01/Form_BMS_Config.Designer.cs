@@ -46,7 +46,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.boxDetectedPacks = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -54,6 +53,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupDataFromBms = new System.Windows.Forms.GroupBox();
+            this.boxStatus1b4 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -79,8 +79,8 @@
             this.boxMaxV2 = new System.Windows.Forms.TextBox();
             this.textBox0 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.boxStatus1b3 = new System.Windows.Forms.TextBox();
             this.boxStatus1b2 = new System.Windows.Forms.TextBox();
+            this.boxStatus1b3 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -131,6 +131,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.btnSaveSettings = new System.Windows.Forms.Button();
             this.MasterID = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -153,7 +159,7 @@
             // 
             // Btn_connectCAN
             // 
-            this.Btn_connectCAN.Location = new System.Drawing.Point(366, 3);
+            this.Btn_connectCAN.Location = new System.Drawing.Point(503, 21);
             this.Btn_connectCAN.Name = "Btn_connectCAN";
             this.Btn_connectCAN.Size = new System.Drawing.Size(119, 30);
             this.Btn_connectCAN.TabIndex = 8;
@@ -229,7 +235,7 @@
             // btnReleseCAN
             // 
             this.btnReleseCAN.Enabled = false;
-            this.btnReleseCAN.Location = new System.Drawing.Point(366, 51);
+            this.btnReleseCAN.Location = new System.Drawing.Point(503, 57);
             this.btnReleseCAN.Name = "btnReleseCAN";
             this.btnReleseCAN.Size = new System.Drawing.Size(119, 33);
             this.btnReleseCAN.TabIndex = 60;
@@ -250,6 +256,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label33);
+            this.tabPage1.Controls.Add(this.label32);
+            this.tabPage1.Controls.Add(this.label31);
+            this.tabPage1.Controls.Add(this.label30);
             this.tabPage1.Controls.Add(this.boxDetectedPacks);
             this.tabPage1.Controls.Add(this.textBox9);
             this.tabPage1.Controls.Add(this.label21);
@@ -267,26 +277,16 @@
             // 
             // boxDetectedPacks
             // 
-            this.boxDetectedPacks.Location = new System.Drawing.Point(336, 34);
+            this.boxDetectedPacks.Location = new System.Drawing.Point(19, 102);
             this.boxDetectedPacks.Multiline = true;
             this.boxDetectedPacks.Name = "boxDetectedPacks";
             this.boxDetectedPacks.Size = new System.Drawing.Size(256, 98);
             this.boxDetectedPacks.TabIndex = 122;
             // 
-            // textBox9
-            // 
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(142, 73);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(51, 20);
-            this.textBox9.TabIndex = 121;
-            this.textBox9.Text = "7";
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(16, 73);
+            this.label21.Location = new System.Drawing.Point(20, 335);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(58, 13);
             this.label21.TabIndex = 120;
@@ -295,9 +295,9 @@
             // textBox8
             // 
             this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(142, 44);
+            this.textBox8.Location = new System.Drawing.Point(148, 286);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(51, 20);
+            this.textBox8.Size = new System.Drawing.Size(127, 20);
             this.textBox8.TabIndex = 119;
             this.textBox8.Text = "7";
             this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -305,16 +305,16 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(16, 47);
+            this.label20.Location = new System.Drawing.Point(20, 289);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(62, 13);
+            this.label20.Size = new System.Drawing.Size(93, 13);
             this.label20.TabIndex = 118;
-            this.label20.Text = "One cell full";
+            this.label20.Text = "Discharge request";
             // 
             // boxNumberOfPacks
             // 
             this.boxNumberOfPacks.Enabled = false;
-            this.boxNumberOfPacks.Location = new System.Drawing.Point(541, 11);
+            this.boxNumberOfPacks.Location = new System.Drawing.Point(148, 59);
             this.boxNumberOfPacks.Name = "boxNumberOfPacks";
             this.boxNumberOfPacks.Size = new System.Drawing.Size(51, 20);
             this.boxNumberOfPacks.TabIndex = 117;
@@ -324,9 +324,10 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(335, 18);
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(16, 34);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(120, 13);
+            this.label19.Size = new System.Drawing.Size(142, 13);
             this.label19.TabIndex = 116;
             this.label19.Text = "Detected Battery Packs";
             // 
@@ -346,6 +347,7 @@
             // 
             // groupDataFromBms
             // 
+            this.groupDataFromBms.Controls.Add(this.boxStatus1b4);
             this.groupDataFromBms.Controls.Add(this.label28);
             this.groupDataFromBms.Controls.Add(this.label27);
             this.groupDataFromBms.Controls.Add(this.label26);
@@ -371,8 +373,8 @@
             this.groupDataFromBms.Controls.Add(this.boxMaxV2);
             this.groupDataFromBms.Controls.Add(this.textBox0);
             this.groupDataFromBms.Controls.Add(this.label18);
-            this.groupDataFromBms.Controls.Add(this.boxStatus1b3);
             this.groupDataFromBms.Controls.Add(this.boxStatus1b2);
+            this.groupDataFromBms.Controls.Add(this.boxStatus1b3);
             this.groupDataFromBms.Controls.Add(this.label17);
             this.groupDataFromBms.Controls.Add(this.label16);
             this.groupDataFromBms.Controls.Add(this.label15);
@@ -418,6 +420,17 @@
             this.groupDataFromBms.TabStop = false;
             this.groupDataFromBms.Text = "Data from battery pack";
             this.groupDataFromBms.Visible = false;
+            // 
+            // boxStatus1b4
+            // 
+            this.boxStatus1b4.BackColor = System.Drawing.Color.LimeGreen;
+            this.boxStatus1b4.Enabled = false;
+            this.boxStatus1b4.Location = new System.Drawing.Point(298, 292);
+            this.boxStatus1b4.Name = "boxStatus1b4";
+            this.boxStatus1b4.Size = new System.Drawing.Size(116, 20);
+            this.boxStatus1b4.TabIndex = 138;
+            this.boxStatus1b4.Text = "OVERVOLTAGE";
+            this.boxStatus1b4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label28
             // 
@@ -668,27 +681,27 @@
             this.label18.TabIndex = 113;
             this.label18.Text = "CELL 1";
             // 
-            // boxStatus1b3
-            // 
-            this.boxStatus1b3.BackColor = System.Drawing.Color.LimeGreen;
-            this.boxStatus1b3.Enabled = false;
-            this.boxStatus1b3.Location = new System.Drawing.Point(222, 292);
-            this.boxStatus1b3.Name = "boxStatus1b3";
-            this.boxStatus1b3.Size = new System.Drawing.Size(65, 20);
-            this.boxStatus1b3.TabIndex = 112;
-            this.boxStatus1b3.Text = "EMPTY";
-            this.boxStatus1b3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // boxStatus1b2
             // 
             this.boxStatus1b2.BackColor = System.Drawing.Color.LimeGreen;
             this.boxStatus1b2.Enabled = false;
-            this.boxStatus1b2.Location = new System.Drawing.Point(151, 292);
+            this.boxStatus1b2.Location = new System.Drawing.Point(154, 292);
             this.boxStatus1b2.Name = "boxStatus1b2";
             this.boxStatus1b2.Size = new System.Drawing.Size(65, 20);
-            this.boxStatus1b2.TabIndex = 111;
-            this.boxStatus1b2.Text = "LOW";
+            this.boxStatus1b2.TabIndex = 112;
+            this.boxStatus1b2.Text = "EMPTY";
             this.boxStatus1b2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // boxStatus1b3
+            // 
+            this.boxStatus1b3.BackColor = System.Drawing.Color.LimeGreen;
+            this.boxStatus1b3.Enabled = false;
+            this.boxStatus1b3.Location = new System.Drawing.Point(227, 292);
+            this.boxStatus1b3.Name = "boxStatus1b3";
+            this.boxStatus1b3.Size = new System.Drawing.Size(65, 20);
+            this.boxStatus1b3.TabIndex = 111;
+            this.boxStatus1b3.Text = "CUT-OFF";
+            this.boxStatus1b3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label17
             // 
@@ -1186,18 +1199,77 @@
             this.MasterID.Size = new System.Drawing.Size(58, 20);
             this.MasterID.TabIndex = 63;
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(113, 57);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(296, 18);
+            this.label29.TabIndex = 123;
+            this.label29.Text = "Battery Managment System  configuration";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(16, 62);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(126, 13);
+            this.label30.TabIndex = 123;
+            this.label30.Text = "Number of detected units";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(16, 86);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(130, 13);
+            this.label31.TabIndex = 124;
+            this.label31.Text = "List of detected units (IDs)";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(20, 232);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(161, 13);
+            this.label32.TabIndex = 125;
+            this.label32.Text = "Overall Battery pack status";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(26, 258);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(87, 13);
+            this.label33.TabIndex = 126;
+            this.label33.Text = "Charging request";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Enabled = false;
+            this.textBox9.Location = new System.Drawing.Point(148, 255);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(127, 20);
+            this.textBox9.TabIndex = 121;
+            this.textBox9.Text = "7";
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form_BMS_Config
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(677, 742);
+            this.Controls.Add(this.label29);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnReleseCAN);
             this.Controls.Add(this.lstMessages);
             this.Controls.Add(this.lbxInfo);
             this.Controls.Add(this.Btn_connectCAN);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_BMS_Config";
             this.Text = "BMS_Config";
             this.Load += new System.EventHandler(this.Form_BMS_Load);
@@ -1213,6 +1285,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1238,8 +1311,8 @@
         private System.Windows.Forms.GroupBox groupDataFromBms;
         private System.Windows.Forms.TextBox textBox0;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox boxStatus1b3;
         private System.Windows.Forms.TextBox boxStatus1b2;
+        private System.Windows.Forms.TextBox boxStatus1b3;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
@@ -1284,7 +1357,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnSaveSettings;
         private System.Windows.Forms.TextBox MasterID;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label20;
@@ -1319,5 +1391,12 @@
         private System.Windows.Forms.TextBox boxMaxV4;
         private System.Windows.Forms.TextBox boxMaxV3;
         private System.Windows.Forms.TextBox boxMaxV2;
+        private System.Windows.Forms.TextBox boxStatus1b4;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label29;
     }
 }
