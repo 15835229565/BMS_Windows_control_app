@@ -643,41 +643,6 @@ namespace PCANBasicExample
                                 boxMaxPwm6.Text = msg.CANMsg.DATA[5].ToString();
                             }
                             
-                            //PARSE message 
-                            /* if (msg.CANMsg.ID == 0x102)
-                             {
-                                 UInt16 voltage = (UInt16)((msg.CANMsg.DATA[2] << 8) + msg.CANMsg.DATA[1]);
-                                 VehicleTargetVoltage = voltage;
-                                 VehicleCurrentRequest = msg.CANMsg.DATA[3];
-                                 VehicleFault = msg.CANMsg.DATA[4];
-                                 VehicleStatus = msg.CANMsg.DATA[5];
-                                 if (VehicleChargeRate100 != 0) VehicleChargeRate = ((float)msg.CANMsg.DATA[6] / (float)VehicleChargeRate100) * 100;
-
-                                 //process vehicle status message
-                                 if (IsBitSet(VehicleStatus,0)){ 
-                                     chkBoxChargeReq.Checked = true;
-                                             //color                       
-                                 }else{ 
-                                     chkBoxChargeReq.Checked = false;
-
-                                 }
-
-
-
-                             }
-
-                             if (msg.CANMsg.ID == 0x1F1)
-                             {
-                                 float current = (UInt16)((msg.CANMsg.DATA[1] << 8) + msg.CANMsg.DATA[2]);
-
-                           
-                            
-                                 //
-                                 //
-
-                             }
-
-                             */
 
 
                         }
@@ -747,9 +712,21 @@ namespace PCANBasicExample
             //CAN/LIN0 
             m_PcanHandle = Convert.ToByte("51", 16);
             stsResult = PCANBasic.Initialize(
-                 m_PcanHandle,
-                 TPCANBaudrate.PCAN_BAUD_250K
-            );
+                    m_PcanHandle,
+                    TPCANBaudrate.PCAN_BAUD_250K);
+            //250kbs
+            /*if(appCANbaudrate.SelectedIndex==0){
+                stsResult = PCANBasic.Initialize(
+                         m_PcanHandle,
+                         TPCANBaudrate.PCAN_BAUD_250K);
+            }else {
+                stsResult = PCANBasic.Initialize(
+                         m_PcanHandle,
+                         TPCANBaudrate.PCAN_BAUD_500K);
+           
+            }*/
+                 
+            
       
       
 

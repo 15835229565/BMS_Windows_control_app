@@ -1,0 +1,13 @@
+z:\dokumenti\Smart-electro.net\GitHub\BMS_Windows_Control_App\BMS_WindowsControl_App_V01\bin\Release\BMS_Diagnostics.exe.manifest
+z:\dokumenti\Smart-electro.net\GitHub\BMS_Windows_Control_App\BMS_WindowsControl_App_V01\bin\Release\BMS_Diagnostics.application
+z:\dokumenti\Smart-electro.net\GitHub\BMS_Windows_Control_App\BMS_WindowsControl_App_V01\bin\Release\BMS_Diagnostics.exe
+z:\dokumenti\Smart-electro.net\GitHub\BMS_Windows_Control_App\BMS_WindowsControl_App_V01\bin\Release\BMS_Diagnostics.pdb
+z:\dokumenti\Smart-electro.net\GitHub\BMS_Windows_Control_App\BMS_WindowsControl_App_V01\obj\Release\ResolveAssemblyReference.cache
+z:\dokumenti\Smart-electro.net\GitHub\BMS_Windows_Control_App\BMS_WindowsControl_App_V01\obj\Release\PCANBasicExample.Form_BMS_Config.resources
+z:\dokumenti\Smart-electro.net\GitHub\BMS_Windows_Control_App\BMS_WindowsControl_App_V01\obj\Release\PCANBasicExample.Properties.Resources.resources
+z:\dokumenti\Smart-electro.net\GitHub\BMS_Windows_Control_App\BMS_WindowsControl_App_V01\obj\Release\GenerateResource.read.1.tlog
+z:\dokumenti\Smart-electro.net\GitHub\BMS_Windows_Control_App\BMS_WindowsControl_App_V01\obj\Release\GenerateResource.write.1.tlog
+z:\dokumenti\Smart-electro.net\GitHub\BMS_Windows_Control_App\BMS_WindowsControl_App_V01\obj\Release\BMS_Diagnostics.exe.manifest
+z:\dokumenti\Smart-electro.net\GitHub\BMS_Windows_Control_App\BMS_WindowsControl_App_V01\obj\Release\BMS_Diagnostics.application
+z:\dokumenti\Smart-electro.net\GitHub\BMS_Windows_Control_App\BMS_WindowsControl_App_V01\obj\Release\BMS_Diagnostics.exe
+z:\dokumenti\Smart-electro.net\GitHub\BMS_Windows_Control_App\BMS_WindowsControl_App_V01\obj\Release\BMS_Diagnostics.pdb

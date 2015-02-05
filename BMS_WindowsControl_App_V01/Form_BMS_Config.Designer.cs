@@ -45,7 +45,12 @@
             this.btnReleseCAN = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.boxDetectedPacks = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -123,6 +128,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.appCANbaudrate = new System.Windows.Forms.ComboBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -132,17 +140,13 @@
             this.btnSaveSettings = new System.Windows.Forms.Button();
             this.MasterID = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupDataFromBms.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -173,7 +177,7 @@
             this.lbxInfo.Location = new System.Drawing.Point(26, 669);
             this.lbxInfo.Name = "lbxInfo";
             this.lbxInfo.ScrollAlwaysVisible = true;
-            this.lbxInfo.Size = new System.Drawing.Size(601, 69);
+            this.lbxInfo.Size = new System.Drawing.Size(629, 69);
             this.lbxInfo.TabIndex = 57;
             // 
             // tmrDisplay
@@ -193,7 +197,7 @@
             this.lstMessages.Location = new System.Drawing.Point(26, 522);
             this.lstMessages.MultiSelect = false;
             this.lstMessages.Name = "lstMessages";
-            this.lstMessages.Size = new System.Drawing.Size(601, 141);
+            this.lstMessages.Size = new System.Drawing.Size(629, 141);
             this.lstMessages.TabIndex = 58;
             this.lstMessages.UseCompatibleStateImageBehavior = false;
             this.lstMessages.View = System.Windows.Forms.View.Details;
@@ -275,6 +279,43 @@
             this.tabPage1.Text = "General";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(26, 258);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(87, 13);
+            this.label33.TabIndex = 126;
+            this.label33.Text = "Charging request";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(20, 232);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(161, 13);
+            this.label32.TabIndex = 125;
+            this.label32.Text = "Overall Battery pack status";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(16, 86);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(130, 13);
+            this.label31.TabIndex = 124;
+            this.label31.Text = "List of detected units (IDs)";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(16, 62);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(126, 13);
+            this.label30.TabIndex = 123;
+            this.label30.Text = "Number of detected units";
+            // 
             // boxDetectedPacks
             // 
             this.boxDetectedPacks.Location = new System.Drawing.Point(19, 102);
@@ -282,6 +323,16 @@
             this.boxDetectedPacks.Name = "boxDetectedPacks";
             this.boxDetectedPacks.Size = new System.Drawing.Size(256, 98);
             this.boxDetectedPacks.TabIndex = 122;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Enabled = false;
+            this.textBox9.Location = new System.Drawing.Point(148, 255);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(127, 20);
+            this.textBox9.TabIndex = 121;
+            this.textBox9.Text = "7";
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label21
             // 
@@ -1114,6 +1165,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -1121,6 +1173,37 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Settings";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.appCANbaudrate);
+            this.groupBox1.Controls.Add(this.label36);
+            this.groupBox1.Location = new System.Drawing.Point(15, 181);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(303, 79);
+            this.groupBox1.TabIndex = 69;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "APP Settings";
+            // 
+            // appCANbaudrate
+            // 
+            this.appCANbaudrate.FormattingEnabled = true;
+            this.appCANbaudrate.Items.AddRange(new object[] {
+            "250",
+            "500"});
+            this.appCANbaudrate.Location = new System.Drawing.Point(80, 29);
+            this.appCANbaudrate.Name = "appCANbaudrate";
+            this.appCANbaudrate.Size = new System.Drawing.Size(121, 21);
+            this.appCANbaudrate.TabIndex = 61;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(16, 37);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(58, 13);
+            this.label36.TabIndex = 64;
+            this.label36.Text = "Baud Rate";
             // 
             // groupBox2
             // 
@@ -1131,12 +1214,12 @@
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.btnSaveSettings);
             this.groupBox2.Controls.Add(this.MasterID);
-            this.groupBox2.Location = new System.Drawing.Point(14, 18);
+            this.groupBox2.Location = new System.Drawing.Point(15, 14);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(303, 135);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Settings";
+            this.groupBox2.Text = "BMS Settings";
             // 
             // label14
             // 
@@ -1209,53 +1292,6 @@
             this.label29.TabIndex = 123;
             this.label29.Text = "Battery Managment System  configuration";
             // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(16, 62);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(126, 13);
-            this.label30.TabIndex = 123;
-            this.label30.Text = "Number of detected units";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(16, 86);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(130, 13);
-            this.label31.TabIndex = 124;
-            this.label31.Text = "List of detected units (IDs)";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(20, 232);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(161, 13);
-            this.label32.TabIndex = 125;
-            this.label32.Text = "Overall Battery pack status";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(26, 258);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(87, 13);
-            this.label33.TabIndex = 126;
-            this.label33.Text = "Charging request";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(148, 255);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(127, 20);
-            this.textBox9.TabIndex = 121;
-            this.textBox9.Text = "7";
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Form_BMS_Config
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1282,6 +1318,8 @@
             this.groupDataFromBms.ResumeLayout(false);
             this.groupDataFromBms.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -1398,5 +1436,8 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox appCANbaudrate;
+        private System.Windows.Forms.Label label36;
     }
 }
