@@ -492,23 +492,23 @@ namespace PCANBasicExample
                     {
                         //id we need to parse
                         byte[] CanId = BitConverter.GetBytes(msg.CANMsg.ID);
-                       byte MasterUnitId =0;
-                       if(boxBmsReadId.Text!=""){
-                            MasterUnitId = (byte)((Convert.ToUInt16(boxBmsReadId.Text)));
-                        }
+                        byte MasterUnitId =0;
+                        MasterUnitId = (byte)((Convert.ToUInt16(ListBoxBmsIds.SelectedItem)));
                        
                         //check if we allready evaluated this BMS ID
-                        var pos = listOfDetectedBms.Find(item => item == CanId[1]);
-                        if (pos==0)
+                        //var pos = listOfDetectedBms.Find(item => item == CanId[1]);
+                        var pos = ListBoxBmsIds.Items.Contains(CanId[1]);
+                        if (!pos)
                         {
                             listOfDetectedBms.Add(CanId[1]);
+                            ListBoxBmsIds.Items.Add(CanId[1]);
                         }
                         boxNumberOfPacks.Text = listOfDetectedBms.Count.ToString();
-                        boxDetectedPacks.Text ="";
+                        /*boxDetectedPacks.Text ="";
                         foreach(var DetectedBms in listOfDetectedBms)
                         {
                             boxDetectedPacks.Text += DetectedBms.ToString();
-                        }
+                        }*/
                          
 
 
@@ -518,7 +518,7 @@ namespace PCANBasicExample
                         {
                             //show value group box
                             groupDataFromBms.Visible = true;
-                            label23.Visible = false;
+                 
 
                             
                             //PARSE status message
@@ -647,9 +647,9 @@ namespace PCANBasicExample
 
                         }
                         else{
-
-                            groupDataFromBms.Visible = false;
-                            label23.Visible = true;
+                        
+                            //groupDataFromBms.Visible = false;
+  
                            
                         }
                         // Modify the message and exit
@@ -744,7 +744,7 @@ namespace PCANBasicExample
                 btnSaveSettings.Enabled = true;
                 btnReleseCAN.Enabled = true;
                 Btn_connectCAN.Enabled = false;
-                boxBmsReadId.Enabled = true;
+
 
                 IncludeTextMessage("CAN connected");
             // Sets the connection status of the main-form
@@ -783,7 +783,7 @@ namespace PCANBasicExample
             }
             btnSaveSettings.Enabled = false;
             btnReleseCAN.Enabled = false;
-            boxBmsReadId.Enabled = false;
+
             Btn_connectCAN.Enabled = true;
             
 
@@ -889,6 +889,11 @@ namespace PCANBasicExample
         private void Form_BMS_Load(object sender, EventArgs e)
         {
             boxBaudRate.SelectedIndex = 0;
+        }
+
+        private void ListBoxBmsIdsReset_Click(object sender, EventArgs e)
+        {
+            ListBoxBmsIds.Items.Clear();
         }
 
 

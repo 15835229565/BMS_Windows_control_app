@@ -49,7 +49,6 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.boxDetectedPacks = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -57,6 +56,8 @@
             this.boxNumberOfPacks = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ListBoxBmsIdsReset = new System.Windows.Forms.Button();
+            this.ListBoxBmsIds = new System.Windows.Forms.ListBox();
             this.groupDataFromBms = new System.Windows.Forms.GroupBox();
             this.boxStatus1b4 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -124,9 +125,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.boxBmsReadId = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.appCANbaudrate = new System.Windows.Forms.ComboBox();
@@ -140,6 +138,9 @@
             this.btnSaveSettings = new System.Windows.Forms.Button();
             this.MasterID = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -155,7 +156,7 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(313, 81);
             this.pictureBox1.TabIndex = 3;
@@ -163,7 +164,7 @@
             // 
             // Btn_connectCAN
             // 
-            this.Btn_connectCAN.Location = new System.Drawing.Point(503, 21);
+            this.Btn_connectCAN.Location = new System.Drawing.Point(593, 21);
             this.Btn_connectCAN.Name = "Btn_connectCAN";
             this.Btn_connectCAN.Size = new System.Drawing.Size(119, 30);
             this.Btn_connectCAN.TabIndex = 8;
@@ -174,10 +175,10 @@
             // lbxInfo
             // 
             this.lbxInfo.FormattingEnabled = true;
-            this.lbxInfo.Location = new System.Drawing.Point(26, 669);
+            this.lbxInfo.Location = new System.Drawing.Point(3, 669);
             this.lbxInfo.Name = "lbxInfo";
             this.lbxInfo.ScrollAlwaysVisible = true;
-            this.lbxInfo.Size = new System.Drawing.Size(629, 69);
+            this.lbxInfo.Size = new System.Drawing.Size(718, 69);
             this.lbxInfo.TabIndex = 57;
             // 
             // tmrDisplay
@@ -194,10 +195,10 @@
             this.clhCount,
             this.clhRcvTime});
             this.lstMessages.FullRowSelect = true;
-            this.lstMessages.Location = new System.Drawing.Point(26, 522);
+            this.lstMessages.Location = new System.Drawing.Point(3, 480);
             this.lstMessages.MultiSelect = false;
             this.lstMessages.Name = "lstMessages";
-            this.lstMessages.Size = new System.Drawing.Size(629, 141);
+            this.lstMessages.Size = new System.Drawing.Size(718, 179);
             this.lstMessages.TabIndex = 58;
             this.lstMessages.UseCompatibleStateImageBehavior = false;
             this.lstMessages.View = System.Windows.Forms.View.Details;
@@ -239,7 +240,7 @@
             // btnReleseCAN
             // 
             this.btnReleseCAN.Enabled = false;
-            this.btnReleseCAN.Location = new System.Drawing.Point(503, 57);
+            this.btnReleseCAN.Location = new System.Drawing.Point(596, 57);
             this.btnReleseCAN.Name = "btnReleseCAN";
             this.btnReleseCAN.Size = new System.Drawing.Size(119, 33);
             this.btnReleseCAN.TabIndex = 60;
@@ -252,19 +253,20 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(26, 90);
+            this.tabControl1.Location = new System.Drawing.Point(3, 90);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(633, 426);
+            this.tabControl1.Size = new System.Drawing.Size(719, 384);
             this.tabControl1.TabIndex = 61;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox6);
+            this.tabPage1.Controls.Add(this.listBox1);
             this.tabPage1.Controls.Add(this.label33);
             this.tabPage1.Controls.Add(this.label32);
             this.tabPage1.Controls.Add(this.label31);
             this.tabPage1.Controls.Add(this.label30);
-            this.tabPage1.Controls.Add(this.boxDetectedPacks);
             this.tabPage1.Controls.Add(this.textBox9);
             this.tabPage1.Controls.Add(this.label21);
             this.tabPage1.Controls.Add(this.textBox8);
@@ -274,7 +276,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(625, 400);
+            this.tabPage1.Size = new System.Drawing.Size(711, 358);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "General";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -282,7 +284,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(26, 258);
+            this.label33.Location = new System.Drawing.Point(278, 200);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(87, 13);
             this.label33.TabIndex = 126;
@@ -292,7 +294,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(20, 232);
+            this.label32.Location = new System.Drawing.Point(307, 177);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(161, 13);
             this.label32.TabIndex = 125;
@@ -301,7 +303,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(16, 86);
+            this.label31.Location = new System.Drawing.Point(16, 35);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(130, 13);
             this.label31.TabIndex = 124;
@@ -310,24 +312,16 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(16, 62);
+            this.label30.Location = new System.Drawing.Point(315, 101);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(126, 13);
             this.label30.TabIndex = 123;
             this.label30.Text = "Number of detected units";
             // 
-            // boxDetectedPacks
-            // 
-            this.boxDetectedPacks.Location = new System.Drawing.Point(19, 102);
-            this.boxDetectedPacks.Multiline = true;
-            this.boxDetectedPacks.Name = "boxDetectedPacks";
-            this.boxDetectedPacks.Size = new System.Drawing.Size(256, 98);
-            this.boxDetectedPacks.TabIndex = 122;
-            // 
             // textBox9
             // 
             this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(148, 255);
+            this.textBox9.Location = new System.Drawing.Point(371, 193);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(127, 20);
             this.textBox9.TabIndex = 121;
@@ -337,7 +331,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(20, 335);
+            this.label21.Location = new System.Drawing.Point(307, 252);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(58, 13);
             this.label21.TabIndex = 120;
@@ -346,7 +340,7 @@
             // textBox8
             // 
             this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(148, 286);
+            this.textBox8.Location = new System.Drawing.Point(371, 219);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(127, 20);
             this.textBox8.TabIndex = 119;
@@ -356,7 +350,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(20, 289);
+            this.label20.Location = new System.Drawing.Point(272, 226);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(93, 13);
             this.label20.TabIndex = 118;
@@ -365,7 +359,7 @@
             // boxNumberOfPacks
             // 
             this.boxNumberOfPacks.Enabled = false;
-            this.boxNumberOfPacks.Location = new System.Drawing.Point(148, 59);
+            this.boxNumberOfPacks.Location = new System.Drawing.Point(447, 98);
             this.boxNumberOfPacks.Name = "boxNumberOfPacks";
             this.boxNumberOfPacks.Size = new System.Drawing.Size(51, 20);
             this.boxNumberOfPacks.TabIndex = 117;
@@ -376,7 +370,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(16, 34);
+            this.label19.Location = new System.Drawing.Point(307, 82);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(142, 13);
             this.label19.TabIndex = 116;
@@ -384,17 +378,35 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.groupDataFromBms);
-            this.tabPage2.Controls.Add(this.boxBmsReadId);
             this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.label23);
+            this.tabPage2.Controls.Add(this.ListBoxBmsIdsReset);
+            this.tabPage2.Controls.Add(this.ListBoxBmsIds);
+            this.tabPage2.Controls.Add(this.groupDataFromBms);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(625, 400);
+            this.tabPage2.Size = new System.Drawing.Size(711, 358);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Details";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // ListBoxBmsIdsReset
+            // 
+            this.ListBoxBmsIdsReset.Location = new System.Drawing.Point(9, 327);
+            this.ListBoxBmsIdsReset.Name = "ListBoxBmsIdsReset";
+            this.ListBoxBmsIdsReset.Size = new System.Drawing.Size(89, 23);
+            this.ListBoxBmsIdsReset.TabIndex = 68;
+            this.ListBoxBmsIdsReset.Text = "Reset";
+            this.ListBoxBmsIdsReset.UseVisualStyleBackColor = true;
+            this.ListBoxBmsIdsReset.Click += new System.EventHandler(this.ListBoxBmsIdsReset_Click);
+            // 
+            // ListBoxBmsIds
+            // 
+            this.ListBoxBmsIds.FormattingEnabled = true;
+            this.ListBoxBmsIds.Location = new System.Drawing.Point(9, 45);
+            this.ListBoxBmsIds.Name = "ListBoxBmsIds";
+            this.ListBoxBmsIds.Size = new System.Drawing.Size(89, 277);
+            this.ListBoxBmsIds.TabIndex = 67;
             // 
             // groupDataFromBms
             // 
@@ -464,7 +476,7 @@
             this.groupDataFromBms.Controls.Add(this.label4);
             this.groupDataFromBms.Controls.Add(this.label3);
             this.groupDataFromBms.Controls.Add(this.label2);
-            this.groupDataFromBms.Location = new System.Drawing.Point(17, 58);
+            this.groupDataFromBms.Location = new System.Drawing.Point(104, 32);
             this.groupDataFromBms.Name = "groupDataFromBms";
             this.groupDataFromBms.Size = new System.Drawing.Size(601, 318);
             this.groupDataFromBms.TabIndex = 6;
@@ -1136,33 +1148,6 @@
             this.label2.TabIndex = 62;
             this.label2.Text = "CELL 2";
             // 
-            // boxBmsReadId
-            // 
-            this.boxBmsReadId.Enabled = false;
-            this.boxBmsReadId.Location = new System.Drawing.Point(102, 11);
-            this.boxBmsReadId.Name = "boxBmsReadId";
-            this.boxBmsReadId.Size = new System.Drawing.Size(100, 20);
-            this.boxBmsReadId.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(14, 14);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 13);
-            this.label9.TabIndex = 65;
-            this.label9.Text = "Battery Pack ID";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(208, 6);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(172, 25);
-            this.label23.TabIndex = 66;
-            this.label23.Text = "No BMS on this ID";
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.groupBox1);
@@ -1286,18 +1271,46 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(113, 57);
+            this.label29.Location = new System.Drawing.Point(90, 57);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(296, 18);
             this.label29.TabIndex = 123;
             this.label29.Text = "Battery Managment System  configuration";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 32);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 13);
+            this.label9.TabIndex = 139;
+            this.label9.Text = "Detected packs";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(19, 51);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(89, 277);
+            this.listBox1.TabIndex = 127;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Enabled = false;
+            this.textBox6.Location = new System.Drawing.Point(371, 249);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(127, 20);
+            this.textBox6.TabIndex = 128;
+            this.textBox6.Text = "7";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form_BMS_Config
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(677, 742);
+            this.ClientSize = new System.Drawing.Size(726, 742);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnReleseCAN);
@@ -1345,7 +1358,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupDataFromBms;
         private System.Windows.Forms.TextBox textBox0;
         private System.Windows.Forms.Label label18;
@@ -1402,9 +1414,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox boxNewMasterId;
-        private System.Windows.Forms.TextBox boxDetectedPacks;
-        private System.Windows.Forms.TextBox boxBmsReadId;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
@@ -1439,5 +1448,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox appCANbaudrate;
         private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.ListBox ListBoxBmsIds;
+        private System.Windows.Forms.Button ListBoxBmsIdsReset;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
